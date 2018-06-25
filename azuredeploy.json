@@ -95,6 +95,9 @@
             }
         }
     },
+    "variables": {
+        "cognitiveservicesid": "[concat(resourceGroup().id,'/providers/','Microsoft.CognitiveServices/accounts/', parameters('accountName'))]"
+    },
     "resources": [
         {
             "apiVersion": "2015-08-01",
