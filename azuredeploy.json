@@ -142,7 +142,7 @@
                     "type": "config",
                     "name": "appsettings",
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+                        "[resourceId('Microsoft.Web/sites', parameters('siteName'))]"
                     ],
                     "properties": {
                         "coginitive_service_face_key": "[listKeys(variables('cognitiveservicesid'),'2016-02-01-preview').key1]",
