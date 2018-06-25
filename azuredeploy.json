@@ -133,6 +133,18 @@
                         "branch": "[parameters('branch')]",
                         "IsManualIntegration": true
                     }
+                },
+                {
+                    "apiVersion": "2015-08-01",
+                    "type": "config",
+                    "name": "appsettings",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+                    ],
+                    "properties": {
+                        "coginitive_service_face_key": "[listKeys(variables('cognitiveservicesid'),'2016-02-01-preview').key1]",
+                        "coginitive_service_face_endpoint": "[reference(variables('cognitiveservicesid'),'2016-02-01-preview').endpoint]"
+                    }
                 }
             ]
         },
