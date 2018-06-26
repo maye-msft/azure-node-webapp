@@ -12,7 +12,7 @@ router.post('/detectface', function (req, res) {
     util.detectface(req.body,(response)=>{
         res.json(response)
     }, (error)=>{
-        res.send(JSON.parse(stringify(error)))
+        res.send(error)
     })
 
 });
