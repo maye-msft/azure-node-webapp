@@ -157,7 +157,7 @@
             "sku": {
                 "name": "[parameters('cognitiveServicesSKU')]"
             },
-            "kind": "ComputerVision",
+            "kind": "Face",
             "name": "[parameters('accountName')]",
             "apiVersion": "2016-02-01-preview",
             "location": "[parameters('cognitiveServicesLocation')]",
